@@ -1,0 +1,11 @@
+{
+  "name": "ts-algo",
+  "version": "1.0.0",
+  "dependencies": {
+  },
+  "scripts": {
+    "start": "yarn compileOne && yarn runJS",
+    "compileOne": "tsc index.ts",
+    "runJS": "node index.js"
+  }
+}
