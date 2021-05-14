@@ -5,7 +5,7 @@
   },
   "scripts": {
     "start": "yarn compileOne && yarn runJS",
-    "compileOne": "tsc index.ts",
-    "runJS": "node index.js"
+    "compileOne": "tsc --build",
+    "runJS": "node src/index.js"
   }
 }
