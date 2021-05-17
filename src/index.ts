@@ -1,5 +1,6 @@
 import {CarModel, UserModel} from "./model";
 import {CarModelEnum} from "./enum";
+import {Deputy, Fraction, Human, VerkhovnaRada} from "./classes";
 
 /*function greet(person: string, date: Date) {
     console.log(`Hello 222 ${person}, today is ${date?.toDateString()}!`);
@@ -154,3 +155,21 @@ class Chair extends Furniture {
 
 let ch = new Chair('living room', 'moebel', 400);
 console.log(ch);
+
+
+console.log('Verkhovna Rada ______________________________');
+
+const Oleh = new Deputy(180, 90, 'Oleh', 'Liashko', 50, false, 0);
+const Petro = new Deputy(183, 150, 'Petro', 'Zhlob', 34, true, 100000);
+const Mykola = new Deputy(191, 90, 'Mykola', 'Skob', 24, false, 0);
+const Natalia = new Deputy(180, 70, 'Natalia', 'Khytra', 29, true, 75000);
+const Viktoriia = new Deputy(165, 45, 'Viktoriia', 'Mazhoruha', 36, true, 98000000);
+const Oksana = new Deputy(175, 65, 'Oksana', 'Sekretytka', 33, true, 40000);
+
+const Yunyi_Orel = new Fraction('Yunyi_Orel', [Mykola, Natalia, Oksana]);
+const Ne_Yunyi_Orel = new Fraction('Ne_Yunyi_Orel', [Oleh, Petro, Viktoriia]);
+
+const VR = new VerkhovnaRada([Yunyi_Orel, Ne_Yunyi_Orel]);
+
+console.log(Yunyi_Orel.findTheBiggestBribeTaker());
+console.log(VR.getTheBiggestBribeTakerInVR());
